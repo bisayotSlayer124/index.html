@@ -1,29 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Vlog Homepage</title>
-  <link rel="stylesheet" href="assets/styles.css" />
+  <title>Welcome to Our Vlogs</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .sidebar {
+      flex: 1 1 200px;
+      background-color: #f0f0f0;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    .sidebar h2 {
+      margin-top: 0;
+    }
+
+    .sidebar a {
+      display: block;
+      margin: 10px 0;
+      color: #fff;
+      background-color: #4a90e2;
+      padding: 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #357abd;
+    }
+
+    .main-content {
+      flex: 3 1 400px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar, .main-content {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Our Vlog Collection</h1>
-    <p>Welcome! Choose a vlog to watch below.</p>
+    <h1 class="fade-in">Welcome to Our Vlogs</h1>
+    <p class="fade-in" style="animation-delay: 1s;">Enjoy the journey through our video stories and favorite songs!</p>
   </header>
 
-  <main>
-    <nav>
-      <a href="vlog1.html">Vlog 1</a>
-      <a href="vlog2.html">Vlog 2</a>
-      <a href="vlog3.html">Vlog 3</a>
-      <a href="vlog4.html">Vlog 4</a>
-      <a href="vlog5.html">Vlog 5</a>
-    </nav>
+  <main class="container">
+    <div class="sidebar">
+      <h2>Choose a Vlog:</h2>
+      <a href="vlog1.html"> Vlog 1</a>
+    </div>
+
+    <div class="main-content">
+      <h2>About This Site</h2>
+      <p>This is a collection of vlogs and favorite music. Each vlog features a personal video and 5 songs that we love to listen to.</p>
+      <p>Click a vlog from the left sidebar to begin!</p>
+    </div>
   </main>
 
   <footer>
-    &copy; 2025 My Vlogs. All rights reserved.
+    &copy; 2025 Our Vlogs. All rights reserved.
   </footer>
 </body>
 </html>
