@@ -1,2 +1,12 @@
 # index.html
-Website ata to pre
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>My Website</title>
+  </head>
+  <body>
+
+    
+  </body>
+  </html>
+  
